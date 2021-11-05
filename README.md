@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# React Bootstrap mobx
 
 In the project directory, you can run:
 
