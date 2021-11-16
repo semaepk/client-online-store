@@ -10,6 +10,11 @@ const NavBar = observer(() => {
     const { user } = useContext(Context)
     const history = useHistory()
 
+    const logOut = () => {
+        user.setUser({})
+        user.setIsAuth(false)
+    }
+
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
@@ -23,13 +28,13 @@ const NavBar = observer(() => {
                             Админ панель</Button>
                         <Button 
                             className="mx-2" variant={'outline-light'}
-                            onClick ={() => history.push(LOGIN_ROUTE)}
+                            onClick ={() => logOut()}
                         >
                             Выйти</Button>
                     </Nav>
                     :
                     <Nav className="ml-auto">
-                        <Button variant={'outline-light'} onClick={() => user.setIsAuth(true)}>Авторизация</Button>
+                        <Button variant={'outline-light'} onClick={() => history.push(LOGIN_ROUTE)}>Авторизация</Button>
                     </Nav>
                 }
             </Container>
