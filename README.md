@@ -1,4 +1,4 @@
-# React Bootstrap mobx
+# React, Bootstrap, mobx, axios
 
 In the project directory, you can run:
 
