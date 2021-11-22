@@ -22,27 +22,31 @@ const NavBar = observer(() => {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
-                <NavLink style={{ color: 'white', textDecoration: 'none' }} to={SHOP_ROUTE}> КупиДевайс </NavLink>
+                <NavLink style={{color:'white'}} to={SHOP_ROUTE}>КупиДевайс</NavLink>
                 {user.isAuth ?
-                    <Nav className="ml-auto">
-                        <Button 
-                            variant={'outline-light'}
-                            onClick ={() => history.push(ADMIN_ROUTE)} 
+                    <Nav className="ml-auto" style={{color: 'white'}}>
+                        <Button
+                            variant={"outline-light"}
+                            onClick={() => history.push(ADMIN_ROUTE)}
                         >
-                            Админ панель</Button>
-                        <Button 
-                            className="mx-2" variant={'outline-light'}
-                            onClick ={() => logOut()}
+                            Админ панель
+                        </Button>
+                        <Button
+                            variant={"outline-light"}
+                            onClick={() => logOut()}
+                            className="ml-2"
                         >
-                            Выйти</Button>
+                            Выйти
+                        </Button>
                     </Nav>
                     :
-                    <Nav className="ml-auto">
-                        <Button variant={'outline-light'} onClick={() => history.push(LOGIN_ROUTE)}>Авторизация</Button>
+                    <Nav className="ml-auto" style={{color: 'white'}}>
+                        <Button variant={"outline-light"} onClick={() => history.push(LOGIN_ROUTE)}>Авторизация</Button>
                     </Nav>
                 }
             </Container>
         </Navbar>
+
     );
 });
 
